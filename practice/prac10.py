@@ -22,6 +22,7 @@ def add(a, b):
 print(add(3, 2))
 
 
+# 적용 
 def isPrime(x):
     for i in range(2, x):
         if (x%i==0):
