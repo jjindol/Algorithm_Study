@@ -1,31 +1,49 @@
-a = input("숫자를 입력하세요: ")
-print(a)
+'''
+조건문
+'''
+x=5
+if x<10:
+    if (x>0):
+        print("10 보다 작은 자연수")
 
-a, b = input("숫자를 입력하세요: ").split() #띄어쓰기, 2와 3 분리
-print(a+b) # 두 숫자가 연결됨
-
-a, b = input("숫자를 입력하세요: ").split()
-a = int(a)
-b = int(b)
-print(a + b) # 형 변환
-
-
-a, b = map(int, input("숫자를 입력하세요: ").split())
-print(a+b)
-print(a-b)
-print(a*b)
-print(a/b)
-print(a//b) #몫
-print(a%b) # 나머지
-print(a**b) # 거듭제곱
+x=7
+if x>0 and x<10:
+     print("10보다 작은 자연수")
+     
+x=7
+if 0<x<10:
+    print("10보다 작은 자연수")
 
 
-a = 4.3
-b = 5
-c = a + b
-print(type(c)) # 실수형
+x=10 # 분기
+if x>0:
+    print("양수")
+else:
+    print("음수")
+
+x=93
+if x>=90:
+    print("A")
+elif x >=80:
+    print("B")
+elif x>=70:
+    print("C")
+elif x>=60:
+    print("D")
+else:
+    print("F")
 
 
 
 
-        
+
+
+
+
+
+
+
+
+
+
+    

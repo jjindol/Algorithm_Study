@@ -1,48 +1,55 @@
 '''
-문자열과 내장함수
+리스트와 내장함수
 '''
 
-msg = "It is Time"
-print(msg.upper()) # 대문자로 바꿔줌
-print(msg) # 원본은 그대로
-print(msg.lower()) # 소문자로 바꿔줌
+import random as r
+a=[]
+print(a)
+b=list()
+print(b)
 
-tmp=msg.upper()
-print(tmp)
-print(tmp.find(" "))
-print(tmp.count("T"))
+a=[1, 2, 3, 4, 5]
+print(a)
+print(a[0])
 
-print("------------------")
+b=list(range(1, 11))
+print(b)
 
-print(msg[:2]) # 인덱스 번호 2번 전까지의 문자 추출
-print(msg[3:7]) # 3번 인덱스부터 6번 인덱스까지
-print(len(msg))
-for i in range(len(msg)):
-    print(msg[i], end=" ")
-print()
+c=a+b
+print(c) # 두 리스트를 합친다.
 
-for x in msg:
-    print(x, end=" ")
-print()
+print(a)
+a.append(6) # 리스트에 값을 추가 
+print(a)
 
-for x in msg:
-    if x.isupper(): # 대문자만 출력 
-        print(x, end=" ")
-print()
+a.insert(3, 7) # 3번 인덱스에 7이라는 값이 들어간다.
+print(a) # [1, 2, 3, 7, 4, 5, 6]
 
-for x in msg:
-    if x.islower(): # 소문자만 출력
-        print(x, end=" ")
-print()
+a.pop() # 맨 뒤 원소 삭제
+print(a)
+a.pop(3) # n번 인덱스의 값 삭제 
+print(a)
 
-tmp="AZaz"
-for x in tmp:
-    print(ord(x), end=" ") # 문자열에 하나씩 접근
-print()
+a.remove(4)
+print(a) # 4에 해당하는 값을 찾아서 삭제 
 
-tmp = 66
-print(chr(tmp))
 
+print(a.index(5)) # 인덱스의 5 값이 몇번 인덱스에 있나?
+
+a = list(range(1, 11))
+print(a)
+print(sum(a))
+print(max(a))
+print(min(a))
+
+r.shuffle(a) # r은 랜덤값
+print(a)
+a.sort()
+print(a) # 다시 오름차순으로
+a.sort(reverse=True)
+print(a) # 내림차순으로 정렬
+a.clear()
+print(a)
 
 
 

@@ -1,52 +1,25 @@
 '''
-리스트와 내장함수(2)
+2차원 리스트 생성과 접근
 '''
 
-a = [23, 12, 36, 53, 19]
-print(a[:3]) # 0, 1, 2 인덱스 출력
-print(a[1:4])
-print(len(a)) # 리스트의 길이 출력
+a=[[0]*3 for _ in range(3)]
+print(a)
+a[0][1]=1
+a[1][1]=2
+print(a)
 
-for i in range(len(a)):
-    print(a[i], end=" ")
+for x in a: # x가 0, 1, 2행 순서로 출력됨
+    print(x)
 print()
 
 for x in a:
-    if x%2==1:
-        print(x, end=" ")
-print()
+    for y in x:
+        print(y, end=" ")
+    print()
 
-for x in enumerate(a):
-    print(x)
-    
-
-print("-------------")
-
-b=(1, 2, 3, 4, 5)
-print(b[0])
-# b[0]=7
-# tuple은 다른 데이터 타입의 요소를 담을 수 있으며, 한 번 생성되면 변경할 수 없다.
-
-
-for x in enumerate(a):
-    print(x[0], x[1])
-print()
-
-for index, value in enumerate(a):
-    print(index, value)
-print()
-
-if all(x<60 for x in a): # 모두 만족시키면 True 
-    print("True")
-else:
-    print("False")
-print()
-
-if any(x<30 for x in a): # 한번이라도 만족시키면 True
-    print("True")
-else:
-    print("False")
-print()
-
-
-
+'''
+1. a는 2차원 리스트이며, 첫 번째 for 루프의 반복 변수 x는 a의 각 행을 나타낸다.
+2. 두 번째 for 루프의 반복 변수 y는 x의 각 요소를 나타낸다.
+3. print(y, end=" ")는 y를 출력하고 공백으로 구분하여 한 줄로 출력한다.
+4. 내부 for 루프가 종료되면 print()를 사용하여 줄바꿈을 수행한다.
+'''

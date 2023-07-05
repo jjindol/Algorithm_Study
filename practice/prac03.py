@@ -1,49 +1,25 @@
 '''
-조건문
+반복문을 이용한 문제풀이
+1) 1부터 N까지 홀수출력하기
+2) 1부터 N까지의 합 구하기
+3) N의 약수 출력하기
 '''
-x=5
-if x<10:
-    if (x>0):
-        print("10 보다 작은 자연수")
+n = int(input("숫자를 입력하세요: "))
+for i in range(1, n+1):
+    print(i)
 
-x=7
-if x>0 and x<10:
-     print("10보다 작은 자연수")
-     
-x=7
-if 0<x<10:
-    print("10보다 작은 자연수")
+n=int(input("숫자를 입력하세요: "))
+for i in range(1,n+1):
+    if (i%2==1) :
+        print(i, end=" ")
 
+n=int(input("숫자를 입력하세요: "))
+sum = 0
+for i in range(1,n+1):
+    sum = sum + i
+print(sum)
 
-x=10 # 분기
-if x>0:
-    print("양수")
-else:
-    print("음수")
-
-x=93
-if x>=90:
-    print("A")
-elif x >=80:
-    print("B")
-elif x>=70:
-    print("C")
-elif x>=60:
-    print("D")
-else:
-    print("F")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
+n=int(input("숫자를 입력하세요: "))
+for i in range(1, n+1):
+    if n%i==0:
+        print(i, end= " ")

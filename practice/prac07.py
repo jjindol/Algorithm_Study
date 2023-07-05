@@ -1,72 +1,52 @@
 '''
-리스트와 내장함수
+리스트와 내장함수(2)
 '''
 
-import random as r
-a=[]
-print(a)
-b=list()
-print(b)
+a = [23, 12, 36, 53, 19]
+print(a[:3]) # 0, 1, 2 인덱스 출력
+print(a[1:4])
+print(len(a)) # 리스트의 길이 출력
 
-a=[1, 2, 3, 4, 5]
-print(a)
-print(a[0])
+for i in range(len(a)):
+    print(a[i], end=" ")
+print()
 
-b=list(range(1, 11))
-print(b)
+for x in a:
+    if x%2==1:
+        print(x, end=" ")
+print()
 
-c=a+b
-print(c) # 두 리스트를 합친다.
+for x in enumerate(a):
+    print(x)
+    
 
-print(a)
-a.append(6) # 리스트에 값을 추가 
-print(a)
+print("-------------")
 
-a.insert(3, 7) # 3번 인덱스에 7이라는 값이 들어간다.
-print(a) # [1, 2, 3, 7, 4, 5, 6]
-
-a.pop() # 맨 뒤 원소 삭제
-print(a)
-a.pop(3) # n번 인덱스의 값 삭제 
-print(a)
-
-a.remove(4)
-print(a) # 4에 해당하는 값을 찾아서 삭제 
+b=(1, 2, 3, 4, 5)
+print(b[0])
+# b[0]=7
+# tuple은 다른 데이터 타입의 요소를 담을 수 있으며, 한 번 생성되면 변경할 수 없다.
 
 
-print(a.index(5)) # 인덱스의 5 값이 몇번 인덱스에 있나?
+for x in enumerate(a):
+    print(x[0], x[1])
+print()
 
-a = list(range(1, 11))
-print(a)
-print(sum(a))
-print(max(a))
-print(min(a))
+for index, value in enumerate(a):
+    print(index, value)
+print()
 
-r.shuffle(a) # r은 랜덤값
-print(a)
-a.sort()
-print(a) # 다시 오름차순으로
-a.sort(reverse=True)
-print(a) # 내림차순으로 정렬
-a.clear()
-print(a)
+if all(x<60 for x in a): # 모두 만족시키면 True 
+    print("True")
+else:
+    print("False")
+print()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+if any(x<30 for x in a): # 한번이라도 만족시키면 True
+    print("True")
+else:
+    print("False")
+print()
 
 
 

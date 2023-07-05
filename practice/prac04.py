@@ -1,25 +1,24 @@
 '''
-반복문을 이용한 문제풀이
-1) 1부터 N까지 홀수출력하기
-2) 1부터 N까지의 합 구하기
-3) N의 약수 출력하기
+중첩 반복문(2중 for문)
 '''
-n = int(input("숫자를 입력하세요: "))
-for i in range(1, n+1):
-    print(i)
+for i in range(5):
+    print("i:", i, sep=" ", end=" ")
+    for j in range(5):
+        print("j:", j, sep=" ", end=" ")
+    print()
 
-n=int(input("숫자를 입력하세요: "))
-for i in range(1,n+1):
-    if (i%2==1) :
-        print(i, end=" ")
+for i in range(5):
+    for j in range(5):
+        print("*", end=" ")
+    print()
 
-n=int(input("숫자를 입력하세요: "))
-sum = 0
-for i in range(1,n+1):
-    sum = sum + i
-print(sum)
+for i in range(5):
+    for j in range(i+1):
+        print("*", end=" ")
+    print()
 
-n=int(input("숫자를 입력하세요: "))
-for i in range(1, n+1):
-    if n%i==0:
-        print(i, end= " ")
+
+for i in range(5):
+    for j in range(5-i): # i=0, 1, 2, 3, 4 일 때, (5-i)는 5, 4, 3, 2, 1
+        print("*", end=" ") 
+    print()

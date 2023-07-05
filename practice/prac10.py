@@ -1,49 +1,20 @@
 '''
-함수 만들기
+람다 함수
 '''
 
-def add(a, b):
-    c=a+b
-    print(c)
-    
-add(3, 2) # main script
-
-def add(a, b):
-    c=a+b
-    return c #값을 return하고 함수가 종료된다.
-
-print(add(3, 2))
-
-def add(a, b):
-    c=a+b
-    d=a-b
-    return c, d
-
-print(add(3, 2))
+def plus_one(x):
+    return x+1
+print(plus_one(2))
 
 
-# 적용 
-def isPrime(x):
-    for i in range(2, x):
-        if (x%i==0):
-            return False
-    return True
-
-a = [12, 13, 7, 9, 19]
-for y in a:
-    if isPrime(y):
-        print(y, end=" ")
+plus_two = lambda x: x+2 # plus_two는 함수가 아니라 변수의 이름 
+print(plus_two(3))
 
 
 
+a = [1, 2, 3]
+print(list(map(plus_one, a)))
 
+print(list(map(lambda x: x+1, a))
 
-
-
-
-
-
-
-
-
-
+# 익명의 표현식을 내장함수의 인자로 사용할 때 편리함. 
